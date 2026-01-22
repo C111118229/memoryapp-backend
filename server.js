@@ -7,6 +7,9 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
+app.get("/", (req, res) => {
+  res.send("Server is alive and kicking!");
+});
 // debug
 console.log("server.js loaded from:", __filename);
 console.log("MONGODB_URI present:", !!process.env.MONGODB_URI);
